@@ -6,6 +6,7 @@ import GameStore from "@/components/GameStore";
 import GameNews from "@/components/GameNews";
 import GameInfo from "@/components/GameInfo";
 import BottomNavigation from "@/components/BottomNavigation";
+import SpaceBackground from "@/components/SpaceBackground";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("catalog");
@@ -28,10 +29,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 pb-20">
-      <GameHeader />
-      <main className="relative">{renderContent()}</main>
-      <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+    <div className="min-h-screen bg-gray-900 pb-20 relative">
+      <SpaceBackground />
+      <div className="relative z-10">
+        <GameHeader />
+        <main className="relative">{renderContent()}</main>
+        <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+      </div>
     </div>
   );
 };
