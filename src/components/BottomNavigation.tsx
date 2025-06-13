@@ -52,7 +52,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-700">
+    <nav className="bg-gray-900 border-t border-gray-700 mt-auto">
       <div className="flex items-center justify-around py-2">
         {navItems.map((item) => (
           <button

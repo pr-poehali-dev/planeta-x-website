@@ -1,6 +1,11 @@
 import React from "react";
+import Icon from "@/components/ui/icon";
 
-const GameHeader = () => {
+interface GameHeaderProps {
+  onQRClick: () => void;
+}
+
+const GameHeader: React.FC<GameHeaderProps> = ({ onQRClick }) => {
   return (
     <header className="relative overflow-hidden">
       <div
@@ -28,8 +33,17 @@ const GameHeader = () => {
           </div>
         </div>
 
+        {/* Download Button */}
+        <button
+          onClick={onQRClick}
+          className="relative z-10 flex items-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover-scale transition-all duration-200 mb-2"
+        >
+          <Icon name="QrCode" size={16} />
+          <span className="text-sm">Скачать игру</span>
+        </button>
+
         {/* Social Media Icons */}
-        <div className="relative z-10 flex items-center space-x-4 mt-2">
+        <div className="relative z-10 flex items-center space-x-4">
           <a
             href="https://t.me/planetaxgame"
             target="_blank"
