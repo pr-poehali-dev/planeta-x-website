@@ -31,9 +31,33 @@ const GameStore = () => {
         </div>
 
         <div className="text-center">
-          <div className="text-3xl font-bold text-orange-400 mb-2">2 999 ₽</div>
+          <div className="text-3xl font-bold text-orange-400 mb-4">2 999 ₽</div>
+
+          {/* Store Buttons */}
+          <div className="space-y-3 mb-4">
+            <a
+              href="https://www.ozon.ru/product/planeta-x-nastolnaya-igra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover-scale font-montserrat flex items-center justify-center space-x-2"
+            >
+              <span>🛒</span>
+              <span>Купить на Ozon</span>
+            </a>
+
+            <a
+              href="https://www.wildberries.ru/catalog/planeta-x-nastolnaya-igra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover-scale font-montserrat flex items-center justify-center space-x-2"
+            >
+              <span>🛍️</span>
+              <span>Купить на Wildberries</span>
+            </a>
+          </div>
+
           <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-bold hover-scale font-montserrat">
-            Купить сейчас
+            Другие магазины
           </button>
         </div>
       </div>
